@@ -2,13 +2,13 @@ import { useState } from "react"
 
 const Header = (props) => {
 
-  const [clicked, toggleClicked] = useState(true)
+  const [clicked, setClicked] = useState(true)
   let buttonText
   clicked ? buttonText = 'Light Mode': buttonText = 'Dark Mode'
   clicked ? props.setTheme('dark-mode') : props.setTheme('light-mode')
   
   let onClick = () => {
-    toggleClicked(!clicked)
+    setClicked(!clicked)
   }
 
   return (
